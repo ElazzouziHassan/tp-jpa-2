@@ -89,3 +89,30 @@ Ajoutez les dépendances nécessaires dans le fichier pom.xml (voir l'étape cor
 ```xml
 mvn clean install
 ```
+
+## Configuration de la Base de Données et Hibernate
+
+- Créez un répertoire src/main/resources/META-INF et ajoutez le fichier persistence.xml.
+```xml
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="tp_jpa_unit">
+        <class>OneToOne.Personne</class>
+        <class>OneToOne.Professeur</class>
+        <class>OneToMany.Departement</class>
+        <class>OneToMany.Adresse</class>
+        <class>ManyToMany.Etudiant</class>
+        <class>ManyToMany.Module</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hibernate_tp" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="password" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+        </properties>
+    </persistence-unit>
+</persistence>
+```
+- Assurez-vous que votre base de données MySQL est active et accessible.
