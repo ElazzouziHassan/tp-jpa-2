@@ -39,6 +39,17 @@ Ce TP implémente plusieurs types de relations entre entités JPA à l'aide de H
 - **Maven** pour la gestion des dépendances et la compilation du projet.
 - **MySQL** pour la base de données, avec la configuration appropriée dans le fichier `persistence.xml`.
 
+## Création du Projet Maven
+1. Ouvrez un terminal dans VS Code.
+2. Tapez la commande suivante pour créer un projet Maven : 
+```xml
+    mvn archetype:generate -DgroupId=com.example -DartifactId=TP_JPA_Hibernate -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+```
+3. Ouvrez le dossier du projet dans VS Code avec:
+```xml
+    code TP_JPA_Hibernate
+```
+
 ## Dépendances Maven
 
 Le projet utilise les dépendances suivantes :
@@ -72,3 +83,9 @@ Le fichier `pom.xml` inclut les dépendances pour Hibernate, MySQL, et JPA. Voic
         <version>2.2</version>
     </dependency>
 </dependencies>
+```
+Ajoutez les dépendances nécessaires dans le fichier pom.xml (voir l'étape correspondante dans ma réponse précédente).
+- Pour mettre à jour les dépendances Maven, utilisez la commande :
+```xml
+mvn clean install
+```
