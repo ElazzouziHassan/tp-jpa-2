@@ -6,7 +6,7 @@ import java.util.List;
 @Entity // L'annotation @Entity indique que cette classe représente une entité JPA qui sera mappée à une table dans la base de données.
 public class Etudiant {
   @Id // L'annotation @Id marque l'attribut suivant comme la clé primaire de l'entité.
-  @GeneratedValue(strategy = GenerationType.IDENTITY) // La valeur de l'ID sera générée automatiquement par la base de données, généralement sous forme d'auto-incrément.
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id; // L'ID de l'étudiant.
   private String nom; // Le nom de l'étudiant.
 
