@@ -6,7 +6,7 @@ import java.util.List;
 @Entity  // L'annotation @Entity marque cette classe comme une entité JPA, indiquant qu'elle sera mappée à une table de la base de données.
 public class Module {
   @Id // L'annotation @Id définit l'attribut suivant comme étant la clé primaire de l'entité.
-  @GeneratedValue(strategy = GenerationType.IDENTITY) // Cette annotation permet de générer automatiquement l'ID via la base de données (généralement sous forme d'auto-incrément).
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id; // L'ID du module.
 
   private String nom;  // Le nom du module.
