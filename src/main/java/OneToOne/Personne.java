@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Table(name = "personnes") // Annotation pour indiquer que cette classe est une entité persistante JPA
 public class Personne {
   @Id // Indique que le champ suivant est la clé primaire
-  @GeneratedValue(strategy = GenerationType.IDENTITY) // Spécifie que la valeur de l'ID est générée automatiquement par la base de données
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String nom; // Attribut pour stocker le nom de la personne
 
