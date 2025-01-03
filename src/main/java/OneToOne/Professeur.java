@@ -5,7 +5,6 @@ import javax.persistence.*;
 @Table(name = "professeurs") // Spécifie le nom de la table dans la base de données
 public class Professeur {
   @Id  // Indique que le champ suivant est la clé primaire
-  // Spécifie que la valeur de l'ID est générée automatiquement par la base de données
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String specialite; // Attribut pour stocker la spécialité du professeur
