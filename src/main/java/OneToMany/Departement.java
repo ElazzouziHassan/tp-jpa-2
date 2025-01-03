@@ -6,7 +6,7 @@ import java.util.List;
 @Entity // Indique que la classe est une entité JPA et sera mappée à une table dans la base de données.
 public class Departement {
   @Id // Déclare cette propriété comme étant l'identifiant de l'entité.
-  @GeneratedValue(strategy = GenerationType.IDENTITY) // Spécifie que la valeur de l'ID sera générée automatiquement par la base de données (avec une stratégie d'auto-incrémentation).
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   
   private Long id; // L'ID du département.
   private String nom; // Le nom du département.
